@@ -1,0 +1,138 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Set the entire screen background to black */
+    color: white; /* Optional: Set default text color to white for visibility */
+}
+
+/* Container for the project cards */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px; 
+}
+
+/* Individual project card styling */
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33% - 40px); /* Make cards responsive and account for margin */
+    margin: 20px; /* Add margin to create space between cards */
+    background-color: white; /* Background for the card */
+    position: relative;
+    height: 300px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjusting card width for smaller screens */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: calc(100% - 40px);
+    }
+}
+
+/* Styling for the project image */
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area */
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; /* Visible by default */
+}
+
+/* Initially hide the project title */
+.project-title {
+    font-size: 1.5em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    color: white; /* Set text color to white */
+    opacity: 0;
+    transition: opacity 0.3s, color 0.3s;
+    z-index: 1;
+}
+
+/* Show only the title on hover */
+.project-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: black; /* Darken the card background */
+}
+
+.project-card:hover .project-image {
+    opacity: 0; /* Hide the image */
+}
+
+.project-card:hover .project-title {
+    opacity: 1; /* Show the title */
+    color: white; /* Ensure the title text is visible */
+}
+
+/* Container for links */
+.links-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Styling for the project link and GitHub link */
+.project-link, .github-link {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white; /* Set link text color to white */
+    text-decoration: none;
+    opacity: 0; /* Hide links initially */
+    transition: opacity 0.3s;
+}
+
+/* Styling for the project link */
+.project-link {
+    background-color: #007bff;
+}
+
+/* Styling for the GitHub link */
+.github-link {
+    background-color: #333; /* Different background color for GitHub link */
+}
+
+/* Show links on hover */
+.project-card:hover .project-link,
+.project-card:hover .github-link {
+    opacity: 1; /* Show the links */
+}
+
+.project-link:hover {
+    background-color: #0056b3; /* Darken background on hover */
+}
+
+.github-link:hover {
+    background-color: #222; /* Darken background on hover */
+}
