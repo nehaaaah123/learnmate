@@ -1,37 +1,55 @@
-/* header.css */
+/* General Header Styling */
 header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background-color:rgb(23, 30, 35);
-}
-
-nav {
-    border-color: #d1d5db;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-
-nav .container {
+    background-color: rgb(23, 30, 35);
+    height: 60px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Space between items */
     align-items: center;
-    max-width: 100%;
-    margin-left: auto;
+}
+
+/* Container styling for header */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+/* Logo Styling */
+.logo {
     margin-right: auto;
 }
 
-.menu {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
+.logo img {
+    width: 50px;
+    height: auto;
 }
 
-/* Default styles for navigation list */
+/* Navigation Styling */
+nav {
+    width: 100%;
+    background-color: rgb(23, 30, 35);
+}
+
+nav .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center; /* Center the menu */
+}
+
+/* Desktop Menu Styling */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav ul {
     display: flex;
     margin: 0;
@@ -56,27 +74,29 @@ nav ul li a:hover {
     color: mediumslateblue;
 }
 
-/* Menu toggle button */
+/* Menu Toggle Button for Mobile */
 .menu-toggle {
-    display: none; /* Hide by default */
+    display: none;
     background: none;
     border: none;
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    margin-left: auto;
 }
 
-/* Mobile menu styles */
+/* Mobile Menu Styling */
 .mobile-menu {
-    display: none; /* Hide by default */
+    display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust as needed */
+    top: 60px;
     right: 0;
-    background-color: black;
+    background-color: rgb(23, 30, 35);
     width: 100%;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .mobile-menu ul {
@@ -93,31 +113,31 @@ nav ul li a:hover {
     border-bottom: 1px solid #333;
 }
 
-/* Media Queries for responsiveness */
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
     .menu {
-        display: none; /* Hide desktop menu on smaller screens */
+        display: none;
     }
 
     .menu-toggle {
-        display: block; /* Show menu toggle button */
+        display: block;
     }
 
     .mobile-menu.menu-open {
-        display: flex; /* Show mobile menu when open */
+        display: flex;
     }
 }
 
 @media (min-width: 1024px) {
     .menu {
-        display: flex; /* Show menu on larger screens */
+        display: flex;
     }
 
     .menu-toggle {
-        display: none; /* Hide menu toggle button on larger screens */
+        display: none;
     }
 
     .mobile-menu {
-        display: none; /* Ensure mobile menu is hidden on larger screens */
+        display: none;
     }
 }
