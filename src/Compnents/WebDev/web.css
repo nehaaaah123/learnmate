@@ -1,98 +1,103 @@
-/* web.css (Tailwind-based styles) */
-h2{
-  color: black;
+/* General container styling */
+.web-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
 }
-/* Body */
-body {
-    background-color: black;
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-  /* Disable scrolling */
-/* body {
-    overflow: hidden; /* Disables both vertical and horizontal scrolling */
-    /* height: 100vh; Ensure the body takes up the full viewport height */
-    /* margin: 0; Remove any default margin */
 
+/* WebCard styling */
+.web-card {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  max-width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  height: 100%;
+  justify-content: space-between;  /* This ensures that the button stays at the bottom */
+}
 
-/* Optional: If you need to prevent the page from resizing or moving */
-/* html, body {
-    position: fixed; /* Fix the page in place */
-    /* width: 100%; Ensure the page uses the full width of the viewport */
-    /* height: 100%; Ensure the page uses the full height of the viewport */
+.web-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
+/* Image styling */
+.web-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
 
-  
-  /* Container for the project cards */
-  .web-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
-    gap: 20px; /* Space between cards */
-    justify-content: center; /* Center align cards */
-    padding: 20px;
-    margin: 0 auto;
-    width: 100%;
-  }
-  
-  /* WebCard */
-  .web-card {
-    background-color: white;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    width: 100%;
-    max-width: 250px; /* Set a maximum width for the card */
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-  }
-  
-  .web-card:hover {
-    transform: scale(1.02); /* Slight zoom effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Styling for the web image */
-  .web-image {
-    width: 100%; /* Make image responsive */
-    height: 150px; /* Set a fixed height for images */
-    object-fit: cover; /* Ensure the image covers the area */
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-  
-  /* Styling for the web title */
-  .web-title {
-    font-size: 1.2em;
-    color: black;
-    text-align: center;
-    margin: 10px 0;
-    font-weight: 600;
-  }
-  
-  /* Links container */
-  .links-container {
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  /* Styling for the project link */
-  .web-link {
-    display: inline-block;
-    padding: 6px 12px;
-    margin: 5px;
-    border-radius: 4px;
-    color: white;
-    background-color: #454b52;
-    text-decoration: none;
-    font-size: 0.8em;
-    transition: background-color 0.3s ease;
-  }
-  
-  .web-link:hover {
-    background-color: #0056b3; /* Darken background on hover */
-  }
-  
+/* Title styling */
+.web-title {
+  font-size: 1.2em;
+  color: black;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+/* About text styling */
+.web-about {
+  font-size: 0.9em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Course level styling */
+.web-level {
+  background-color: #f0f0f0;
+  color: #555;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Review box styling */
+.web-review {
+  background-color: #e0e4e8;
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+}
+
+/* Container for the button */
+.web-link-container {
+  margin-top: auto;  /* This ensures the link stays at the bottom of the card */
+  text-align: center;
+}
+
+/* Link styling */
+.web-link {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 4px;
+  color: white;
+  background-color: #454b52;
+  text-decoration: none;
+  font-size: 0.8em;
+  transition: background-color 0.3s ease;
+}
+
+.web-link:hover {
+  background-color: #0056b3;
+}
